@@ -4,7 +4,7 @@ jQuery-Ajax-File-Upload
 Plugin to add support for file uploads using jQuery $.ajax()
 
 ##What is this
-All this plugin does is grab the files from fiel fields then when you submit your form it does a pre-ajax call to your back end with the file post data. After uploading information about those files is passed back and appended to a normal $.ajax() call.
+All this plugin does is grab the files from file fields on change then when you submit your form it does a pre-ajax call to your back-end with the file post data. After uploading, information about those files is passed back and appended to a normal $.ajax() call.
 
 ## Usage
 It's easy enough to use, just include it on your page and attach it to your form with:
