@@ -20,7 +20,7 @@ You can pass the following parameters to it:
 		submitOptions : { dataType : 'json' }, // Customise the parameters passed to the $.ajax() call on the form submit
 		before	      : function(){}, // Run stuff before the upload happens
 		beforeSubmit  : function(uploadData){ console.log(uploadData); }, // access the data returned by the upload
-		success       : function(data, textStatus, jqXHR){ console.log(data); }, // Callback for the submit succes ajax call
+		success       : function(data, textStatus, jqXHR){ console.log(data); }, // Callback for the submit success ajax call
 		error 	      : function(jqXHR, textStatus, errorThrown){ console.log(jqXHR); }, // Callback if an error happens with your upload call or the submit call
 		complete      : function(jqXHR, textStatus){ console.log(jqXHR); } // Callback on completion
 	});
