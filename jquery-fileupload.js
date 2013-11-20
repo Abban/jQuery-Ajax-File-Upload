@@ -21,6 +21,7 @@
             uploadOptions : {},
             submitOptions : {},
             before        : function(){},
+            beforeSubmit  : function(){ return true; },
             success       : function(){},
             error         : function(){},
             complete      : function(){}
@@ -131,7 +132,7 @@
             var self = event.data.context;
 
             // Run the beforeSubmit callback
-            self.settings.beforeSubmit(uploadData);
+            if(!self.settings.beforeSubmit(uploadData)) return;
 
             // Serialize the form data
             var data = self.$form.serializeArray();
