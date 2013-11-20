@@ -33,7 +33,7 @@
         this.element    = element;
         this.$form      = $(element);
         this.$uploaders = $('input[type=file]', this.element);
-        this.files      = {},
+        this.files      = {};
         this.settings   = $.extend({}, defaults, options);
         this._defaults  = defaults;
         this._name      = pluginName;
@@ -114,7 +114,7 @@
                 processData: false, // Don't process the files, we're using FormData
                 contentType: false, // Set content type to false as jQuery will tell the server its a query string request
                 success: function(data, textStatus, jqXHR){ self.processSubmit(event, data); },
-                error: function(jqXHR, textStatus, errorThrown){ self.settings.error(jqXHR, textStatus, errorThrown) }
+                error: function(jqXHR, textStatus, errorThrown){ self.settings.error(jqXHR, textStatus, errorThrown); }
             }, self.settings.uploadOptions));
         },
 
@@ -162,8 +162,8 @@
                 cache: false,
                 dataType: 'json',
                 success: function(data, textStatus, jqXHR){ self.settings.success(data, textStatus, jqXHR); },
-                error: function(jqXHR, textStatus, errorThrown){ self.settings.error(jqXHR, textStatus, errorThrown) },
-                complete: function(jqXHR, textStatus){ self.settings.complete(jqXHR, textStatus) }
+                error: function(jqXHR, textStatus, errorThrown){ self.settings.error(jqXHR, textStatus, errorThrown); },
+                complete: function(jqXHR, textStatus){ self.settings.complete(jqXHR, textStatus); }
             }, self.settings.submitOptions));
         }
     };
