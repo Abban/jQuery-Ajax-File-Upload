@@ -20,8 +20,8 @@ You can pass the following parameters to it:
 	$('#myform').fileUpload({
 		uploadData    : { 'extra_data' : 'blah' }, // Append POST data to the upload
 		submitData    : { 'moar_extra_data' : 'blah' }, // Append POST data to the form submit
-		uploadOptions : { dataType : 'json' }, // Customise the parameters passed to the $.ajax() call on uploads
-		submitOptions : { dataType : 'json' }, // Customise the parameters passed to the $.ajax() call on the form submit
+		uploadOptions : { dataType : 'json' }, // Customise the parameters passed to the $.ajax() call on uploads. You can use any of the normal $.ajax() params
+		submitOptions : { dataType : 'json' }, // Customise the parameters passed to the $.ajax() call on the form submit. You can use any of the normal $.ajax() params
 		before	      : function(){}, // Run stuff before the upload happens
 		beforeSubmit  : function(uploadData){ console.log(uploadData); return true; }, // access the data returned by the upload return false to stop the submit ajax call
 		success       : function(data, textStatus, jqXHR){ console.log(data); }, // Callback for the submit success ajax call
