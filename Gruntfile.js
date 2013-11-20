@@ -21,11 +21,18 @@ module.exports = function(grunt)
                     module: true
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['jquery-fileupload.js'],
+                tasks: ['build']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', 'build');
     grunt.registerTask('build', ['jshint', 'uglify']);
