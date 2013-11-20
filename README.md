@@ -6,7 +6,7 @@ Plugin to add support for file uploads using jQuery $.ajax()
 ##What is this?
 All this plugin does is:
 
-1. Grab the files from file fields on change events and adds the data to an array
+1. Grabs the files from file fields on change events and adds the data to an array.
 2. On form submit it does a pre-ajax call to the back-end with the file post data.
 3. After uploading, information about those files is passed back and appended to a normal $.ajax() call.
 
