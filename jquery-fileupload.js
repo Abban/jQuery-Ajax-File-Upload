@@ -92,7 +92,7 @@
             // Add the files
             $.each(self.files, function(key, field)
             {
-                $.each(field, function(key, value)
+                $.each(field, function(k, value)
                 {
                     data.append(key, value);
                 });
