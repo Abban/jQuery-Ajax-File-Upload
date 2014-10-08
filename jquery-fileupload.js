@@ -92,10 +92,14 @@
             // Add the files
             $.each(self.files, function(key, field)
             {
-                $.each(field, function(key, value)
-                {
-                    data.append(key, value);
-                });
+                if(field.length > 1) {
+                    $.each(field, function(key, value)
+                    {
+                        data.append(key, value);
+                    });
+                } else {
+                    data.append(key, field.item(0));
+                }
             });
 
             // If there is uploadData passed append it
