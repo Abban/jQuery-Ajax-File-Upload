@@ -3,7 +3,7 @@ jQuery-Ajax-File-Upload
 
 Plugin to add support for file uploads using jQuery $.ajax()
 
-##What is this?
+## What is this?
 All this plugin does is:
 
 1. Grabs the files from file fields on change events and adds the data to an array.
